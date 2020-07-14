@@ -1,7 +1,24 @@
 .team {
-	background-color: grey;
+	font-size: 40px;
 }
 
 .pointButtons {
-	margin: 1rem;
+	margin: 0.5rem;
+	cursor: pointer;
+	padding: 5px 10px;
+	font-size: 20px;
+}
+
+.updateButtons {
+	margin: 0.5rem;
+	cursor: pointer;
+	margin-bottom: 30px;
+}
+
+.teamname {
+	margin-top: 80px;
+}
+
+.update {
+	margin-top: 100px;
 }

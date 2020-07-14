@@ -3,7 +3,7 @@ import styles from "./Header.module.css";
 export const Header = () => {
 	return (
 		<div>
-			<h1 className={styles.header}>Scoreboard</h1>
+			<h1 className={styles.header}> The Scoreboard</h1>
 		</div>
 	);
 };
