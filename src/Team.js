@@ -3,28 +3,46 @@ import styles from "./Team.module.css";
 
 export const Team = () => {
 	const [teamName, setTeamName] = useState("Gators");
-	let newTeamName = "";
+	const [newTeamName, setNewTeamName] = useState("");
+	const [teamScore, setTeamScore] = useState(0);
+
 	const handleTeamNameInput = (event) => {
-		newTeamName = event.target.value;
+		setNewTeamName(event.target.value);
 	};
 	const handleTeamNameClick = () => {
 		setTeamName(newTeamName);
+		setNewTeamName("");
+	};
+
+	const handleAddPoint = () => {
+		setTeamScore(teamScore + 1);
+	};
+
+	const handleSubPoint = () => {
+		if (teamScore === 0) {
+			return;
+		}
+		setTeamScore(teamScore - 1);
 	};
 	return (
 		<div>
 			<div className={styles.teamname}>
 				<h2 className={styles.team}>{teamName}</h2>
-				<h2 className={styles.team}>0</h2>
+				<h2 className={styles.team}>{teamScore}</h2>
 			</div>
 			<div className={styles.update}>
-				<input onChange={handleTeamNameInput} />
+				<input onChange={handleTeamNameInput} value={newTeamName} />
 				<button onClick={handleTeamNameClick} className={styles.updateButtons}>
 					Update Team Name
 				</button>
 			</div>
 			<div>
-				<button className={styles.pointButtons}>+</button>
-				<button className={styles.pointButtons}>-</button>
+				<button onClick={handleAddPoint} className={styles.pointButtons}>
+					+
+				</button>
+				<button onClick={handleSubPoint} className={styles.pointButtons}>
+					-
+				</button>
 			</div>
 		</div>
 	);
