@@ -1,5 +1,11 @@
+body {
+	background-color: #b0b8b4ff;
+	color: #184a45ff;
+}
+
 .team {
 	font-size: 40px;
+	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 
 .pointButtons {
@@ -7,12 +13,30 @@
 	cursor: pointer;
 	padding: 5px 10px;
 	font-size: 20px;
+	border-radius: 5px;
+}
+
+.pointButtons:hover {
+	margin: 0px;
+	box-shadow: 0 0 5px 5px #fc766aff;
 }
 
 .updateButtons {
 	margin: 0.5rem;
 	cursor: pointer;
 	margin-bottom: 30px;
+	border-radius: 5px;
+	font-size: 17px;
+}
+
+.updateButtons:hover {
+	margin: 0px;
+	box-shadow: 0 0 5px 5px #fc766aff;
+}
+
+.input {
+	border-radius: 5px;
+	font-size: 18px;
 }
 
 .teamname {

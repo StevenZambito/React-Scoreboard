@@ -31,7 +31,11 @@ export const Team = () => {
 				<h2 className={styles.team}>{teamScore}</h2>
 			</div>
 			<div className={styles.update}>
-				<input onChange={handleTeamNameInput} value={newTeamName} />
+				<input
+					onChange={handleTeamNameInput}
+					value={newTeamName}
+					className={styles.input}
+				/>
 				<button onClick={handleTeamNameClick} className={styles.updateButtons}>
 					Update Team Name
 				</button>
