@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./Team.module.css";
 
-export const Team = () => {
+export const Team = (props) => {
 	const [teamName, setTeamName] = useState("Gators");
 	const [newTeamName, setNewTeamName] = useState("");
 	const [teamScore, setTeamScore] = useState(0);
@@ -9,6 +9,7 @@ export const Team = () => {
 	const handleTeamNameInput = (event) => {
 		setNewTeamName(event.target.value);
 	};
+
 	const handleTeamNameClick = () => {
 		setTeamName(newTeamName);
 		setNewTeamName("");
@@ -27,8 +28,8 @@ export const Team = () => {
 	return (
 		<div>
 			<div className={styles.teamname}>
-				<h2 className={styles.team}>{teamName}</h2>
-				<h2 className={styles.team}>{teamScore}</h2>
+				<h2 className={styles.team}>{props.name}</h2>
+				<h2 className={styles.team}>{props.score}</h2>
 			</div>
 			<div className={styles.update}>
 				<input
