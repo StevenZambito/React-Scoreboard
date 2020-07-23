@@ -22,6 +22,7 @@ export function App() {
 			teamScore: 0,
 		},
 	];
+
 	return (
 		<div className="App">
 			<Header />

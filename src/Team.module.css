@@ -1,10 +1,16 @@
 body {
-	background-color: #b0b8b4ff;
-	color: #184a45ff;
+	background-color: #eef5db;
+	color: #517677;
+	font-family: Impact, sans-serif;
 }
 
 .team {
 	font-size: 40px;
+}
+
+.teamScore {
+	font-size: 40px;
+	color: #fc766aff;
 }
 
 .pointButtons {
@@ -13,11 +19,17 @@ body {
 	padding: 5px 10px;
 	font-size: 20px;
 	border-radius: 5px;
+	width: 60px;
+	height: 30px;
+	background-color: #fc766aff;
+	color: white;
+	border: none;
+	outline: none;
 }
 
 .pointButtons:hover {
-	margin: 0px;
-	box-shadow: 0 0 5px 5px #fc766aff;
+	border: solid;
+	border-color: #fc766aff;
 }
 
 .updateButtons {
@@ -25,17 +37,29 @@ body {
 	cursor: pointer;
 	margin-bottom: 30px;
 	border-radius: 5px;
+	padding: 7px;
 	font-size: 17px;
+	background-color: #517677;
+	color: white;
+	border: none;
+	outline: none;
+	font-family: Impact, sans-serif;
+	letter-spacing: 0.5px;
+}
+
+input {
+	border-top-style: hidden;
+	border-right-style: hidden;
+	border-left-style: hidden;
+	border-bottom-style: hidden;
+	outline: 3px solid #517677;
+	border-radius: 5px;
+	font-size: 19px;
 }
 
 .updateButtons:hover {
-	margin: 0px;
-	box-shadow: 0 0 5px 5px #fc766aff;
-}
-
-.input {
-	border-radius: 5px;
-	font-size: 18px;
+	border: solid;
+	border-color: #517677;
 }
 
 .teamname {

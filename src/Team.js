@@ -29,7 +29,7 @@ export const Team = (props) => {
 		<div>
 			<div className={styles.teamname}>
 				<h2 className={styles.team}>{props.name}</h2>
-				<h2 className={styles.team}>{props.score}</h2>
+				<h2 className={styles.teamScore}>{props.score}</h2>
 			</div>
 			<div className={styles.update}>
 				<input
