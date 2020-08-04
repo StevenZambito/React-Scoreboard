@@ -11,8 +11,7 @@ export const Team = (props) => {
 	};
 
 	const handleTeamNameClick = () => {
-		setTeamName(newTeamName);
-		setNewTeamName("");
+		props.updateTeamName(newTeamName, props.index);
 	};
 
 	const handleAddPoint = () => {
@@ -25,6 +24,7 @@ export const Team = (props) => {
 		}
 		setTeamScore(teamScore - 1);
 	};
+
 	return (
 		<div>
 			<div className={styles.teamname}>
