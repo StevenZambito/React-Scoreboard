@@ -29,6 +29,12 @@ export function App() {
 		setListOfTeams(updatedListOfTeams);
 	};
 
+	const updateTeamScore = (newScore, index) => {
+		const updatedListOfTeams = [...listOfTeams];
+		updatedListOfTeams[index].teamScore = newScore;
+		setListOfTeams(updatedListOfTeams);
+	};
+
 	return (
 		<div className="App">
 			<Header />
@@ -40,6 +46,7 @@ export function App() {
 						index={index}
 						key={index}
 						updateTeamName={updateTeamName}
+						updateTeamScore={updateTeamScore}
 					/>
 				);
 			})}

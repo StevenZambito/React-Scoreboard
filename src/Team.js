@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import styles from "./Team.module.css";
 
 export const Team = (props) => {
-	const [teamName, setTeamName] = useState("Gators");
 	const [newTeamName, setNewTeamName] = useState("");
-	const [teamScore, setTeamScore] = useState(0);
 
 	const handleTeamNameInput = (event) => {
 		setNewTeamName(event.target.value);
@@ -15,14 +13,14 @@ export const Team = (props) => {
 	};
 
 	const handleAddPoint = () => {
-		setTeamScore(teamScore + 1);
+		props.updateTeamScore(props.score + 1, props.index);
 	};
 
 	const handleSubPoint = () => {
-		if (teamScore === 0) {
+		if (props.score === 0) {
 			return;
 		}
-		setTeamScore(teamScore - 1);
+		props.updateTeamScore(props.score - 1, props.index);
 	};
 
 	return (
